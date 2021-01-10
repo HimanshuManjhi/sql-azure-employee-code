@@ -14,23 +14,29 @@ namespace DotNetCoreSqlDb.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3");
+                .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("DotNetCoreSqlDb.Models.Todo", b =>
+            modelBuilder.Entity("DotNetCoreSqlDb.Models.Employee", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<string>("Address")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Description")
+                    b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ID");
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
 
-                    b.ToTable("Todo");
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employee");
                 });
 #pragma warning restore 612, 618
         }
