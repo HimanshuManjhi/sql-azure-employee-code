@@ -1,2 +1,3 @@
 # sql-azure-employee-code
-Employee Crud
+Employee CRUD Operation on Azure and LocalDB
+
